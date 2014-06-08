@@ -1,0 +1,1 @@
+{template user()}Hello, {@user.name}!{end}
