@@ -4,7 +4,7 @@
   "description": "A Snakeskin view engine for Express",
   "main": "index.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -26,9 +26,8 @@
     "LiveScript": "^1.2.0",
     "chai": "^1.9.1",
     "express": "^4.4.0",
-    "grunt": "^0.4.5",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-mocha-test": "^0.11.0",
+    "gulp": "^3.7.0",
+    "gulp-mocha": "^0.4.1",
     "mocha": "^1.20.1"
   },
   "dependencies": {
