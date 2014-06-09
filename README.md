@@ -6,7 +6,7 @@ express-snakeskin
 Установка
 ---------
 
-`$ npm install --save-dev express-snakeskin`
+`$ npm install --save express-snakeskin`
 
 Использование
 -------------
