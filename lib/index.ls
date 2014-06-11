@@ -56,6 +56,8 @@ SnakeSkinCompiler =  {
     _ss = options[SnakeSkinCompiler.specialprop] ||= SnakeSkinCompiler.defaultOptions
     options[SnakeSkinCompiler.specialprop] = _ss = ^^SnakeSkinCompiler.defaultOptions <<<< _ss
 
+    options.file ||= '' # имя файла
+
     try
       js_tmpl = {}
       snakeskin.Vars = options # глобальные переменные 
@@ -64,7 +66,7 @@ SnakeSkinCompiler =  {
       if 'Object' `is-type` template
         js_tmpl = template
       else
-        snakeskin.compile template, { context: js_tmpl }
+        snakeskin.compile template, { context: js_tmpl }, { file: options.file }
 
       renderer = js_tmpl[ _ss.main-template ] or js_tmpl[ SnakeSkinCompiler.default-main-template ]
       unless renderer then return fn new Error "no renderer found!"
@@ -85,6 +87,8 @@ SnakeSkinCompiler =  {
 
     # определим имя рисовальщика-шаблона. Совпадает с именем файла
     _ss.main-template ||= path.basename file, path.extname file
+
+    options.file = file
 
     if _ss.cold-cache
 
