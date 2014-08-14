@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "LiveScript": "^1.2.0",
-    "snakeskin": "^3.3.0",
+    "snakeskin": "^4.0.10",
     "prelude-ls": "^1.1.1"
   }
 }
